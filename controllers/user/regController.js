@@ -1,5 +1,6 @@
 import User from '../../models/userModels.js'
 import expressAsyncHandler from 'express-async-handler'
+import { generateToken } from '../../helpers/generateToken.js'
 // @desc Register user
 // @route POST /api/users/
 // @access Public
@@ -19,7 +20,9 @@ export const registerUser = expressAsyncHandler(async (req, res) => {
 		password,
 	})
 
+	const token = generateToken(user._id)
+
 	//Create token
 
-	res.json(user)
+	res.json({ user, token })
 })
