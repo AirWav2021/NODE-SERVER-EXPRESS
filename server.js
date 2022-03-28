@@ -5,11 +5,16 @@ import morgan from 'morgan'
 import dotenv from 'dotenv'
 import colors from 'colors'
 
+// Config
+import { connectDB } from './config/db.js'
+
 // Routes
 
 import userRoutes from './routes/useRoutes.js'
 
 dotenv.config()
+
+connectDB()
 
 const app = express()
 
