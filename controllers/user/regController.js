@@ -1,4 +1,4 @@
-import User from '../../models/userModels.js'
+import User from '../../models/userModel.js'
 import expressAsyncHandler from 'express-async-handler'
 import { generateToken } from '../../helpers/generateToken.js'
 // @desc Register user

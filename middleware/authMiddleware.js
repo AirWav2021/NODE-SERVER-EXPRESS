@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import expressAsyncHandler from 'express-async-handler'
 
-import User from '../models/userModels.js'
+import User from '../models/userModel.js'
 
 export const protect = expressAsyncHandler(async (req, res, next) => {
 	let token
